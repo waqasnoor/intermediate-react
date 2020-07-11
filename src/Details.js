@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, Suspense } from "react";
 import pet from "@frontendmasters/pet";
 import { navigate } from "@reach/router";
 import Carousel from "./Carousel";
@@ -46,6 +46,7 @@ class Details extends React.Component {
     } = this.state;
 
     return (
+      // <Suspense fallback={<h1>Lazy Loading</h1>}>
       <div className="details">
         <Carousel media={media} />
         <div>
@@ -73,6 +74,7 @@ class Details extends React.Component {
           ) : null}
         </div>
       </div>
+      // </Suspense>
     );
   }
 }
