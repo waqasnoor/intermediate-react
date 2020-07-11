@@ -1,22 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
-import { Router, Link } from "@reach/router";
-import Details from "./Details";
-import SearchParams from "./SearchParams";
+import { Router } from "@reach/router";
 import ThemeContext from "./ThemeContext";
+import NavBar from "./NavBar";
+
+import * as R from "ramda";
+import moment from "moment";
+
+const Details = lazy(() => import("./Details"));
+const SearchParams = lazy(() => import("./SearchParams"));
+
+// import SearchParams from "./SearchParams";
+
+console.log({ R, moment });
 
 const App = () => {
   const theme = useState("#4D6CFA");
   return (
     <ThemeContext.Provider value={theme}>
       <div>
-        <header>
-          <Link to="/">Adopt Me!</Link>
-        </header>
-        <Router>
-          <SearchParams path="/" />
-          <Details path="/details/:id" />
-        </Router>
+        <NavBar />
+        <Suspense fallback={<h1>Loading....</h1>}>
+          <Router>
+            <SearchParams path="/" />
+            <Details path="/details/:id" />
+          </Router>
+        </Suspense>
       </div>
     </ThemeContext.Provider>
   );
