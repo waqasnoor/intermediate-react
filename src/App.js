@@ -7,10 +7,12 @@ import NavBar from "./NavBar";
 import * as R from "ramda";
 import moment from "moment";
 
-const Details = lazy(() => import("./Details"));
-const SearchParams = lazy(() => import("./SearchParams"));
+// const Details = lazy(() => import("./Details"));
+// const SearchParams = lazy(() => import("./SearchParams"));
 
-// import SearchParams from "./SearchParams";
+import SearchParams from "./SearchParams";
+
+import Details from "./Details";
 
 console.log({ R, moment });
 
@@ -20,15 +22,14 @@ const App = () => {
     <ThemeContext.Provider value={theme}>
       <div>
         <NavBar />
-        <Suspense fallback={<h1>Loading....</h1>}>
-          <Router>
-            <SearchParams path="/" />
-            <Details path="/details/:id" />
-          </Router>
-        </Suspense>
+        {/* <Suspense fallback={<h1>Loading....</h1>}> */}
+        <Router>
+          <SearchParams path="/" />
+          <Details path="/details/:id" />
+        </Router>
+        {/* </Suspense> */}
       </div>
     </ThemeContext.Provider>
   );
 };
-
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
