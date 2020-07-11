@@ -4,19 +4,27 @@
 }
 
 body {
-  background-color: #81a69b;
+  background-color: #f2f5ff;
   background-image: url(http://static.frontendmasters.com/resources/2019-05-02-complete-intro-react-v5/image-background.png);
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Raleway, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lato;
+}
 .search-params {
   width: 1100px;
   margin: 0 auto;
 }
 
 .search-params form {
-  background-color: #d9c148;
+  background-color: #e84855;
   width: 360px;
   margin: 0px 25px 0px 0px;
   padding: 35px 15px 15px 15px;
@@ -25,18 +33,22 @@ body {
 }
 
 .search {
-  background-color: #d9c148;
+  background-color: #e84855;
   width: 715px;
   padding: 15px;
   border-radius: 9px;
   float: left;
   margin-bottom: 25px;
+  color: #f2f5ff;
+}
+.search h1 {
+  color: #f2f5ff;
 }
 
 .details {
   width: 1100px;
   margin: 0 auto;
-  background-color: #d9c148;
+  background-color: #e84855;
   padding: 15px;
   border-radius: 9px;
   margin-bottom: 25px;
@@ -48,7 +60,8 @@ body {
   display: block;
   overflow: hidden;
   margin: 25px 0;
-  border-bottom: #bf9b2f 1px solid;
+  border-bottom: #f2f5ff 1px solid;
+  color: #f2f5ff;
 }
 
 .pet img {
@@ -77,7 +90,7 @@ body {
   white-space: nowrap;
   font-weight: normal;
   font-size: 30px;
-  color: #bf3334;
+  color: #f2f5ff;
   width: 95%;
   overflow: hidden;
   margin: 0;
@@ -100,6 +113,7 @@ header > a,
   font-size: 20px;
   margin: 0;
   text-overflow: ellipsis;
+  color: #f2f5ff;
 }
 
 header a {
@@ -123,11 +137,12 @@ header {
 .details p {
   line-height: 1.5;
   padding: 0px 15px;
+  color: #f2f5ff;
 }
 
 .details h1 {
   text-align: center;
-  color: #bf3334;
+  color: #f2f5ff;
   font-size: 60px;
   margin: 5px 0px;
 }
@@ -135,6 +150,7 @@ header {
 .details h2 {
   text-align: center;
   margin: 5px 0px 20px 0px;
+  color: #f2f5ff;
 }
 
 .carousel {
@@ -172,6 +188,7 @@ header {
 .search-params label {
   display: block;
   width: 60px;
+  color: #f2f5ff;
 }
 
 .search-params input,
